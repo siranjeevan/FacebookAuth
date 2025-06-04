@@ -6,13 +6,34 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		74310B242DDF2CD100DC2676 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 74310B232DDF2CD100DC2676 /* FirebaseAnalytics */; };
+		74310B262DDF2CD100DC2676 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 74310B252DDF2CD100DC2676 /* FirebaseAnalyticsWithoutAdIdSupport */; };
+		74310B282DDF2CD100DC2676 /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = 74310B272DDF2CD100DC2676 /* FirebaseAppCheck */; };
+		74310B2A2DDF2CD100DC2676 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 74310B292DDF2CD100DC2676 /* FirebaseAuth */; };
+		74310B2D2DDF2D0800DC2676 /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 74310B2C2DDF2D0800DC2676 /* FacebookLogin */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		74310B112DDF2C9700DC2676 /* fbAuth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fbAuth.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		74310B312DDF2E2400DC2676 /* Exceptions for "fbAuth" folder in "fbAuth" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 74310B102DDF2C9700DC2676 /* fbAuth */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		74310B132DDF2C9700DC2676 /* fbAuth */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				74310B312DDF2E2400DC2676 /* Exceptions for "fbAuth" folder in "fbAuth" target */,
+			);
 			path = fbAuth;
 			sourceTree = "<group>";
 		};
@@ -23,6 +44,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74310B2D2DDF2D0800DC2676 /* FacebookLogin in Frameworks */,
+				74310B242DDF2CD100DC2676 /* FirebaseAnalytics in Frameworks */,
+				74310B282DDF2CD100DC2676 /* FirebaseAppCheck in Frameworks */,
+				74310B262DDF2CD100DC2676 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
+				74310B2A2DDF2CD100DC2676 /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +91,11 @@
 			);
 			name = fbAuth;
 			packageProductDependencies = (
+				74310B232DDF2CD100DC2676 /* FirebaseAnalytics */,
+				74310B252DDF2CD100DC2676 /* FirebaseAnalyticsWithoutAdIdSupport */,
+				74310B272DDF2CD100DC2676 /* FirebaseAppCheck */,
+				74310B292DDF2CD100DC2676 /* FirebaseAuth */,
+				74310B2C2DDF2D0800DC2676 /* FacebookLogin */,
 			);
 			productName = fbAuth;
 			productReference = 74310B112DDF2C9700DC2676 /* fbAuth.app */;
@@ -94,6 +125,10 @@
 			);
 			mainGroup = 74310B082DDF2C9600DC2676;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				74310B222DDF2CD100DC2676 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				74310B2B2DDF2D0800DC2676 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 74310B122DDF2C9700DC2676 /* Products */;
 			projectDirPath = "";
@@ -249,12 +284,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = fbAuth/fbAuth.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"fbAuth/Preview Content\"";
 				DEVELOPMENT_TEAM = DT476ZBQHD;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = fbAuth/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -278,12 +315,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = fbAuth/fbAuth.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"fbAuth/Preview Content\"";
 				DEVELOPMENT_TEAM = DT476ZBQHD;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = fbAuth/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -324,6 +363,53 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		74310B222DDF2CD100DC2676 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.13.0;
+			};
+		};
+		74310B2B2DDF2D0800DC2676 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/facebook/facebook-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 14.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		74310B232DDF2CD100DC2676 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 74310B222DDF2CD100DC2676 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		74310B252DDF2CD100DC2676 /* FirebaseAnalyticsWithoutAdIdSupport */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 74310B222DDF2CD100DC2676 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsWithoutAdIdSupport;
+		};
+		74310B272DDF2CD100DC2676 /* FirebaseAppCheck */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 74310B222DDF2CD100DC2676 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAppCheck;
+		};
+		74310B292DDF2CD100DC2676 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 74310B222DDF2CD100DC2676 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		74310B2C2DDF2D0800DC2676 /* FacebookLogin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 74310B2B2DDF2D0800DC2676 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookLogin;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 74310B092DDF2C9600DC2676 /* Project object */;
 }
